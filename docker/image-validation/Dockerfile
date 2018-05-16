@@ -4,9 +4,9 @@ MAINTAINER Olivier Liechti <olivier.liechti@heig-vd.ch>
 #
 # When we build the image, we copy the executable jar in the image file system. 
 #
-COPY src /opt/app/
+COPY src /opt/src/
 
-WORKDIR /opt/app/
+WORKDIR /opt/src/
 RUN npm install
 
-ENTRYPOINT ["node", "/opt/app/app.js"]
+ENTRYPOINT ["node", "/opt/src/app.js"]
